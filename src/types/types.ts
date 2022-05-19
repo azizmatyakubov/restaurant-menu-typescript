@@ -1,4 +1,4 @@
-export interface Menu {
+export interface Dish {
     id:          number;
     name:        string;
     image:       string;
@@ -15,4 +15,17 @@ export interface Comment {
     comment: string;
     author:  string;
     date:    string;
+}
+
+export interface NavbarInterface {
+    title: string;
+}
+
+export interface Reservation {
+    name: string,
+    phone: string,
+    numberOfPeople: number,
+    smoking: boolean,
+    dateTime: string,
+    specialRequests: string,
 }

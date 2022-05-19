@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Carousel, Container, Col, Row } from "react-bootstrap";
 import items from "../data/menu.json";
-import { Menu } from "../types/types";
+import { Dish } from "../types/types";
 import DishComments from "./DishComments";
 
 const Home = () => {
-  const [selectedDish, setSelectedDish] = useState<Menu>();
+  const [selectedDish, setSelectedDish] = useState<Dish>();
 
   return (
     <Container>
@@ -33,7 +33,7 @@ const Home = () => {
       </Row>
       <Row className="mt-3 justify-content-center">
         <Col xs={12} md={6} className="text-center">
-          <DishComments selectedDish={selectedDish} />
+          {selectedDish && <DishComments selectedDish={selectedDish} />}
         </Col>
       </Row>
     </Container>

@@ -1,6 +1,6 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import MyNavbar from "./components/MyNavbar";
+import MyNavbar from "./components/MyNav";
 import Home from "./components/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotFound from "./components/NotFound";
@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <MyNavbar brand="Strivestaurant" />
+        <MyNavbar title="Strivestaurant" />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<h1>PROFILE PAGE</h1>} />
